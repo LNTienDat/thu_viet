@@ -3,17 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
     // QUOTES
     // ============================================================
     const quotes = [
-        'Đây là một câu rất dài để test xem bức thư có hiển thị đúng không nha! Khi câu dài, bức thư sẽ tự giãn ra theo chiều dọc và màn hình sẽ cuộn được, không bị tràn hay bị cắt bớt. Bạn cứ thêm câu dài bao nhiêu cũng được, giao diện sẽ tự điều chỉnh.',
-        'Cuộc đời ngắn lắm, cười nhiều lên nha!',
-        'Bạn là người tuyệt vời nhất tôi từng gặp.',
-        'Dù thế nào, tôi vẫn luôn ở đây vì bạn.',
-        'Bạn xứng đáng được yêu thương thật nhiều.',
-        'Mỗi ngày có bạn là một ngày đáng nhớ.',
-        'Hãy cứ là chính mình, bạn thật tuyệt đấy!',
-        'Cảm ơn bạn đã luôn là chính mình.',
-        'Bạn đẹp hơn mỗi ngày, thật đấy!',
-        'Cứ vui lên nha, bạn xứng đáng với điều đó.',
-        'Có bạn là mọi thứ đều trở nên dễ chịu hơn.'
+        'Ai cũng yêu một bông hồng, nhưng để yêu một chiếc lá thì hẳn là có rất nhiều tình cảm. Yêu cái đẹp là điều bình thường, nhưng yêu những điều bình thường lại là một điều rất đẹp đẽ.',
+        'Mực rơi thành mộng, chữ nở thành hoa. Người trao hồn chữ, chữ lưu hồn người.',
+        'Tôi rót hồn tôi xuống mắt nàng. Hồn tôi là cả một lời van. Tôi van nàng đấy! van nàng đấy! Ai có yêu đương chả vội vàng?',
+        'Trong tim mỗi người đều có một ngọn lửa đang cháy, người qua đường lại chỉ có thể nhìn thấy khói đang bay.',
+        'Yêu, là chết ở trong lòng một ít, Vì mấy khi yêu mà chắc được yêu? Cho rất nhiều, song nhận chẳng bao nhiêu: Người ta phụ, hoặc thờ ơ, chẳng biết.',
+        'Nếu nỗi nhớ cũng có âm thanh tôi không mong nó là những tiếng nức nở bi thương.',
+        'Hồi ức ấy mà, như là bệnh xương khớp của người già, trái gió trở trời, mấy người không đau.',
+        'Mỗi khi em thấy, mình kém xinh, hãy nhớ rằng gương mặt ấy là kết tinh của hàng trăm thế hệ đã từng yêu nhau tha thiết.',
+        'Thì ra trong những ngày ta không còn là gì của nhau, em vẫn lặng lẽ sống trong trí nhớ của tôi, bằng cách nào đó, rất dai dẳng.',
+        'Một vạt nắng nằm quên trên bụi cỏ. Trời chưa mưa, đất đã muốn mềm lòng. Sỏi đá cũng đa tình em thấy đó. Huống chi là sương khói, huống chi anh!',
+        'Rồi bỗng một ngày giông gió, tóc em rối bời. Có một người xuất hiện, buộc gọn hết đống muộn phiền tả tơi.',
+        'Gom hết dịu dàng của ngày hôm nay vào một nụ cười và một đóa hoa.',
+        'Mọi giấc mơ đều bắt đầu từ giấy và bút.',
+        'Vì bạn có khả năng vượt qua nên thử thách mới xuất hiện.',
+        'Trên thế giới có rất nhiều người tốt, nếu không gặp họ hãy trở thành họ.',
+        'Khi bạn thật sự muốn làm việc gì đó, cả thế giới sẽ giúp bạn.',
+        'Cuộc sống là 30% những gì xảy đến với bạn, 70% còn lại là cách bạn nhìn nhận và đối mặt với nó.',
+        'Đừng sợ phải ở một mình, mặt trời cũng luôn một mình nhưng mỗi ngày vẫn toả sáng.',
+        'Còn hiện cái tôi trên đôi mắt, tình yêu sẽ tắt trên đôi môi.',
+        'Nếu lời nói lúc nóng giận không giữ được, thì lời hứa lúc bình tĩnh liệu còn giá trị gì.'
     ];
 
     function getRandomQuote() {
