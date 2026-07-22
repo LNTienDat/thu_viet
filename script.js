@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         'Hồi ức ấy mà, như là bệnh xương khớp của người già, trái gió trở trời, mấy người không đau.',
         'Mỗi khi em thấy, mình kém xinh, hãy nhớ rằng gương mặt ấy là kết tinh của hàng trăm thế hệ đã từng yêu nhau tha thiết.',
         'Thì ra trong những ngày ta không còn là gì của nhau, em vẫn lặng lẽ sống trong trí nhớ của tôi, bằng cách nào đó, rất dai dẳng.',
-        'Một vạt nắng nằm quên trên bụi cỏ. Trời chưa mưa, đất đã muốn mềm lòng. Sỏi đá cũng đa tình em thấy đó. Huống chi là sương khói, huống chi anh!',
         'Rồi bỗng một ngày giông gió, tóc em rối bời. Có một người xuất hiện, buộc gọn hết đống muộn phiền tả tơi.',
         'Gom hết dịu dàng của ngày hôm nay vào một nụ cười và một đóa hoa.',
         'Mọi giấc mơ đều bắt đầu từ giấy và bút.',
