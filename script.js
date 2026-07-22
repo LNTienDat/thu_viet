@@ -22,7 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'Cuộc sống là 30% những gì xảy đến với bạn, 70% còn lại là cách bạn nhìn nhận và đối mặt với nó.',
         'Đừng sợ phải ở một mình, mặt trời cũng luôn một mình nhưng mỗi ngày vẫn toả sáng.',
         'Còn hiện cái tôi trên đôi mắt, tình yêu sẽ tắt trên đôi môi.',
-        'Nếu lời nói lúc nóng giận không giữ được, thì lời hứa lúc bình tĩnh liệu còn giá trị gì.'
+        'Nếu lời nói lúc nóng giận không giữ được, thì lời hứa lúc bình tĩnh liệu còn giá trị gì.',
+        'Mình sẽ ở cạnh người hiền lành, để trái tim luôn ngập nắng.',
+        'Khi bạn ra khỏi cơn bão, bạn sẽ không còn là cùng một người mà đã bước vào.',
+        'Khi bạn có 1 ngày tồi tệ, không sao. Vì nó là 1 ngày, không phải 1 đời.',
+        'Họ bảo tôi nhạt, chịu thôi tôi đâu phải laura cà phê đâu mà đòi đậm đà.',
+        'Có một người đi qua hoa cúc, bỏ lại sau lưng cả tuổi thơ mình. Có hai người đi qua hoa cúc, bỏ lại sau lưng cả một mối tình.'
     ];
 
     function getRandomQuote() {
