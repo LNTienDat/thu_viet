@@ -26,7 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'Khi bạn ra khỏi cơn bão, bạn sẽ không còn là cùng một người mà đã bước vào.',
         'Khi bạn có 1 ngày tồi tệ, không sao. Vì nó là 1 ngày, không phải 1 đời.',
         'Họ bảo tôi nhạt, chịu thôi tôi đâu phải laura cà phê đâu mà đòi đậm đà.',
-        'Có một người đi qua hoa cúc, bỏ lại sau lưng cả tuổi thơ mình. Có hai người đi qua hoa cúc, bỏ lại sau lưng cả một mối tình.'
+        'Có một người đi qua hoa cúc, bỏ lại sau lưng cả tuổi thơ mình. Có hai người đi qua hoa cúc, bỏ lại sau lưng cả một mối tình.',
+        'Có những thứ đẹp nhất không phải để mang về, mà để mang theo trong ký ức. Điều quý giá nhất sau mỗi chuyến đi không phải món đồ lưu niệm, mà là những điều mình học được.',
+        'Đôi khi trong cuộc sống, việc chạy theo một việc gì đó phải đi kèm việc dừng lại, bởi vì nó sẽ cho ta thấy phần thưởng mà ta đang nhận khi chạy theo nó.',
+        'Người ta mải miết đi tìm sự hoàn hảo nguyên bản mà quên mất rằng, thứ vừa vặn nhất đôi khi lại đến từ những mảnh chắp vá vô tình. Cuộc đời và tình yêu vốn dĩ luôn trọn vẹn theo cách của những sai số.'
     ];
 
     function getRandomQuote() {
