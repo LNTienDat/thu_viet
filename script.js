@@ -29,7 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
         'Có một người đi qua hoa cúc, bỏ lại sau lưng cả tuổi thơ mình. Có hai người đi qua hoa cúc, bỏ lại sau lưng cả một mối tình.',
         'Có những thứ đẹp nhất không phải để mang về, mà để mang theo trong ký ức. Điều quý giá nhất sau mỗi chuyến đi không phải món đồ lưu niệm, mà là những điều mình học được.',
         'Đôi khi trong cuộc sống, việc chạy theo một việc gì đó phải đi kèm việc dừng lại, bởi vì nó sẽ cho ta thấy phần thưởng mà ta đang nhận khi chạy theo nó.',
-        'Người ta mải miết đi tìm sự hoàn hảo nguyên bản mà quên mất rằng, thứ vừa vặn nhất đôi khi lại đến từ những mảnh chắp vá vô tình. Cuộc đời và tình yêu vốn dĩ luôn trọn vẹn theo cách của những sai số.'
+        'Người ta mải miết đi tìm sự hoàn hảo nguyên bản mà quên mất rằng, thứ vừa vặn nhất đôi khi lại đến từ những mảnh chắp vá vô tình. Cuộc đời và tình yêu vốn dĩ luôn trọn vẹn theo cách của những sai số.',
+        'Lỡ một chuyến xe, có thể đợi chuyến khác. Lỡ một người, chưa chắc gặp lại.',
+        'Người ta thường trao con tim cho một kẻ lướt qua, và lấy lại từ một người sẵn sàng chết vì mình.',
+        'Thứ không vượt qua được, từ trước đến nay chưa bao giờ là núi, mà là những chấp niệm chất chồng trong lòng.',
+        'Mỗi người có một múi giờ hạnh phúc khác nhau, chỉ mong bạn đừng nhìn đồng hồ của người khác mà sốt ruột cho cuộc đời mình.',
+        'Em ngồi khóc, mưa rơi ướt cả vai gầy. Có người khoác áo, và mưa tạnh từ đấy.',
+        'Đa số những người ăn ý thì sẽ gặp được người để ý.'
     ];
 
     function getRandomQuote() {
