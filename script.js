@@ -115,7 +115,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // ============================================================
     // MUSIC PLAYER
     // ============================================================
-    const playlist = ['music.mp3'];
+    const playlist = [
+        'music/binh_yen.mp3',
+        'music/chuyen_rang.mp3',
+        'music/khong_yeu_em.mp3',
+        'music/mix.mp3',
+        'music/say_dam.mp3',
+        'music/somebodys_pleasure.mp3',
+        'music/tan_gai_505.mp3'
+    ];
+
+    // Shuffle playlist (Fisher-Yates)
+    function shuffleArray(arr) {
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+    }
+    shuffleArray(playlist);
     let currentTrack = 0;
 
     const audio       = document.getElementById('mp-audio');
