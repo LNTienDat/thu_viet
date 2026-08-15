@@ -142,11 +142,14 @@ document.addEventListener('DOMContentLoaded', () => {
         audio.load();
     }
 
-    // Show player after login
+    // Show player and auto-play after login
+    const origLoginClick = loginBtn.onclick;
     loginBtn.addEventListener('click', () => {
         setTimeout(() => {
             player.classList.add('visible');
-        }, 1200);
+            loadTrack(0);
+            audio.play().catch(() => {});
+        }, 800);
     });
 
     // Play / Pause

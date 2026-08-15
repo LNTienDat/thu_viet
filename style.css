@@ -353,19 +353,19 @@ body {
 /* ===================== MUSIC PLAYER ===================== */
 .music-player {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 16px;
+    right: 16px;
     z-index: 9999;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 18px;
-    background: rgba(30, 20, 25, 0.92);
-    backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(240, 144, 144, 0.2);
+    gap: 6px;
+    padding: 8px 14px;
+    background: rgba(30, 20, 25, 0.88);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(240, 144, 144, 0.15);
+    border-radius: 40px;
     opacity: 0;
-    transform: translateY(100%);
+    transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 .music-player.visible {
@@ -375,16 +375,16 @@ body {
 
 .mp-time {
     font-family: 'Outfit', sans-serif;
-    font-size: 0.78rem;
+    font-size: 0.7rem;
     color: #d4a0a0;
-    min-width: 34px;
+    min-width: 28px;
     text-align: center;
     user-select: none;
 }
 
 .mp-progress-wrap {
-    flex: 1;
-    height: 4px;
+    width: 80px;
+    height: 3px;
     background: rgba(240, 144, 144, 0.18);
     border-radius: 4px;
     position: relative;
@@ -401,12 +401,12 @@ body {
     position: absolute;
     top: 50%;
     left: 0%;
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     background: #f09090;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 6px rgba(240, 144, 144, 0.5);
+    box-shadow: 0 0 4px rgba(240, 144, 144, 0.5);
     opacity: 0;
     transition: opacity 0.2s;
 }
@@ -418,23 +418,22 @@ body {
     background: none;
     border: none;
     color: #d4a0a0;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
     cursor: pointer;
-    padding: 4px 6px;
+    padding: 2px 4px;
     border-radius: 50%;
-    transition: color 0.2s, transform 0.15s, background 0.2s;
+    transition: color 0.2s, transform 0.15s;
     user-select: none;
     line-height: 1;
 }
 .mp-btn:hover {
     color: #f09090;
-    background: rgba(240, 144, 144, 0.1);
-    transform: scale(1.15);
+    transform: scale(1.2);
 }
 .mp-btn-play {
-    font-size: 1.3rem;
-    width: 36px;
-    height: 36px;
+    font-size: 1rem;
+    width: 28px;
+    height: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
