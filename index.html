@@ -130,6 +130,20 @@
         </div>
     </div>
 
+    <!-- ====== MUSIC PLAYER ====== -->
+    <div id="music-player" class="music-player">
+        <span class="mp-time" id="mp-current">0:00</span>
+        <div class="mp-progress-wrap" id="mp-progress-wrap">
+            <div class="mp-progress-bar" id="mp-progress-bar"></div>
+            <div class="mp-progress-thumb" id="mp-progress-thumb"></div>
+        </div>
+        <span class="mp-time" id="mp-duration">0:00</span>
+        <button class="mp-btn" id="mp-prev" title="Bài trước">⏮</button>
+        <button class="mp-btn mp-btn-play" id="mp-play" title="Phát/Dừng">▶</button>
+        <button class="mp-btn" id="mp-next" title="Bài tiếp">⏭</button>
+    </div>
+    <audio id="mp-audio" preload="auto"></audio>
+
     <script src="script.js"></script>
 </body>
 </html>

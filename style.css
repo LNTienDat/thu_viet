@@ -349,3 +349,95 @@ body {
     0%, 100% { opacity: 0; transform: translateY(0) scale(0); }
     50%       { opacity: 0.7; transform: translateY(-14px) scale(1); }
 }
+
+/* ===================== MUSIC PLAYER ===================== */
+.music-player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 18px;
+    background: rgba(30, 20, 25, 0.92);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(240, 144, 144, 0.2);
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.music-player.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mp-time {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    color: #d4a0a0;
+    min-width: 34px;
+    text-align: center;
+    user-select: none;
+}
+
+.mp-progress-wrap {
+    flex: 1;
+    height: 4px;
+    background: rgba(240, 144, 144, 0.18);
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+.mp-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #f09090, #e07878);
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+.mp-progress-thumb {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 12px;
+    height: 12px;
+    background: #f09090;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 6px rgba(240, 144, 144, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.mp-progress-wrap:hover .mp-progress-thumb {
+    opacity: 1;
+}
+
+.mp-btn {
+    background: none;
+    border: none;
+    color: #d4a0a0;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 4px 6px;
+    border-radius: 50%;
+    transition: color 0.2s, transform 0.15s, background 0.2s;
+    user-select: none;
+    line-height: 1;
+}
+.mp-btn:hover {
+    color: #f09090;
+    background: rgba(240, 144, 144, 0.1);
+    transform: scale(1.15);
+}
+.mp-btn-play {
+    font-size: 1.3rem;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid rgba(240, 144, 144, 0.3);
+    border-radius: 50%;
+}

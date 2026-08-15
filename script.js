@@ -111,4 +111,99 @@ document.addEventListener('DOMContentLoaded', () => {
         quoteEl.textContent = getRandomQuote();
         goTo(screen1, screen2, 700);
     });
+
+    // ============================================================
+    // MUSIC PLAYER
+    // ============================================================
+    const playlist = ['music.mp3'];
+    let currentTrack = 0;
+
+    const audio       = document.getElementById('mp-audio');
+    const player      = document.getElementById('music-player');
+    const playBtn     = document.getElementById('mp-play');
+    const prevBtn     = document.getElementById('mp-prev');
+    const nextBtn     = document.getElementById('mp-next');
+    const progressWrap = document.getElementById('mp-progress-wrap');
+    const progressBar = document.getElementById('mp-progress-bar');
+    const progressThumb = document.getElementById('mp-progress-thumb');
+    const currentTime = document.getElementById('mp-current');
+    const durationEl  = document.getElementById('mp-duration');
+
+    function formatTime(sec) {
+        if (isNaN(sec)) return '0:00';
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60);
+        return m + ':' + (s < 10 ? '0' : '') + s;
+    }
+
+    function loadTrack(index) {
+        currentTrack = index;
+        audio.src = playlist[currentTrack];
+        audio.load();
+    }
+
+    // Show player after login
+    loginBtn.addEventListener('click', () => {
+        setTimeout(() => {
+            player.classList.add('visible');
+        }, 1200);
+    });
+
+    // Play / Pause
+    playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+            if (!audio.src || audio.src === window.location.href) loadTrack(0);
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    audio.addEventListener('play', () => { playBtn.textContent = '⏸'; });
+    audio.addEventListener('pause', () => { playBtn.textContent = '▶'; });
+
+    // Update progress
+    audio.addEventListener('timeupdate', () => {
+        if (audio.duration) {
+            const pct = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = pct + '%';
+            progressThumb.style.left = pct + '%';
+            currentTime.textContent = formatTime(audio.currentTime);
+        }
+    });
+
+    audio.addEventListener('loadedmetadata', () => {
+        durationEl.textContent = formatTime(audio.duration);
+    });
+
+    // Seek
+    progressWrap.addEventListener('click', (e) => {
+        const rect = progressWrap.getBoundingClientRect();
+        const pct = (e.clientX - rect.left) / rect.width;
+        if (audio.duration) audio.currentTime = pct * audio.duration;
+    });
+
+    // Prev / Next
+    prevBtn.addEventListener('click', () => {
+        if (audio.currentTime > 3) {
+            audio.currentTime = 0;
+        } else {
+            currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
+            loadTrack(currentTrack);
+            audio.play();
+        }
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentTrack = (currentTrack + 1) % playlist.length;
+        loadTrack(currentTrack);
+        audio.play();
+    });
+
+    // Auto next when track ends
+    audio.addEventListener('ended', () => {
+        currentTrack = (currentTrack + 1) % playlist.length;
+        loadTrack(currentTrack);
+        audio.play();
+    });
 });
