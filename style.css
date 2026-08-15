@@ -440,3 +440,30 @@ body {
     border: 1.5px solid rgba(240, 144, 144, 0.3);
     border-radius: 50%;
 }
+.mp-btn svg {
+    display: block;
+}
+
+/* Mobile: full width player */
+@media (max-width: 640px) {
+    .music-player {
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 16px 16px 0 0;
+        padding: 10px 16px;
+        gap: 8px;
+    }
+    .mp-progress-wrap {
+        flex: 1;
+        width: auto;
+    }
+    .mp-btn-play {
+        width: 34px;
+        height: 34px;
+    }
+    .mp-btn-play svg {
+        width: 18px;
+        height: 18px;
+    }
+}

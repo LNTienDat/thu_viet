@@ -138,9 +138,16 @@
             <div class="mp-progress-thumb" id="mp-progress-thumb"></div>
         </div>
         <span class="mp-time" id="mp-duration">0:00</span>
-        <button class="mp-btn" id="mp-prev" title="Bài trước">⏮</button>
-        <button class="mp-btn mp-btn-play" id="mp-play" title="Phát/Dừng">▶</button>
-        <button class="mp-btn" id="mp-next" title="Bài tiếp">⏭</button>
+        <button class="mp-btn" id="mp-prev" title="Bài trước">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+        </button>
+        <button class="mp-btn mp-btn-play" id="mp-play" title="Phát/Dừng">
+            <svg class="mp-icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <svg class="mp-icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
+        <button class="mp-btn" id="mp-next" title="Bài tiếp">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+        </button>
     </div>
     <audio id="mp-audio" preload="auto"></audio>
 

@@ -142,15 +142,19 @@ document.addEventListener('DOMContentLoaded', () => {
         audio.load();
     }
 
-    // Show player and auto-play after login
-    const origLoginClick = loginBtn.onclick;
+    // Show player immediately (visible on login screen)
+    player.classList.add('visible');
+    loadTrack(0);
+
+    // Auto-play when user clicks login
     loginBtn.addEventListener('click', () => {
         setTimeout(() => {
-            player.classList.add('visible');
-            loadTrack(0);
             audio.play().catch(() => {});
-        }, 800);
+        }, 500);
     });
+
+    const iconPlay  = document.querySelector('.mp-icon-play');
+    const iconPause = document.querySelector('.mp-icon-pause');
 
     // Play / Pause
     playBtn.addEventListener('click', () => {
@@ -162,8 +166,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    audio.addEventListener('play', () => { playBtn.textContent = '⏸'; });
-    audio.addEventListener('pause', () => { playBtn.textContent = '▶'; });
+    audio.addEventListener('play', () => {
+        iconPlay.style.display = 'none';
+        iconPause.style.display = 'block';
+    });
+    audio.addEventListener('pause', () => {
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+    });
 
     // Update progress
     audio.addEventListener('timeupdate', () => {
