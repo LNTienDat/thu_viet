@@ -125,7 +125,10 @@ document.addEventListener('DOMContentLoaded', () => {
         'music/tan_gai_505.mp3',
         'music/thac_mac.mp3',
         'music/tiny_love.mp3',
-        'music/tinh_yeu_xanh_la.mp3'
+        'music/tinh_yeu_xanh_la.mp3',
+        'music/1.mp3',
+        'music/2.mp3',
+        'music/3.mp3'
     ];
 
     // Shuffle playlist (Fisher-Yates)
