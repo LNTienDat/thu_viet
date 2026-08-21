@@ -110,7 +110,11 @@ document.addEventListener('DOMContentLoaded', () => {
     openEnvBtn.addEventListener('click', () => {
         quoteEl.textContent = getRandomQuote();
         goTo(screen1, screen2, 700);
+        // Hiện nút ? khi vào màn hình thư
+        setTimeout(() => infoWidget.classList.add('visible'), 900);
     });
+
+    const infoWidget = document.querySelector('.info-widget');
 
     // ============================================================
     // MUSIC PLAYER
