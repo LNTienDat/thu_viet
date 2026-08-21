@@ -350,69 +350,69 @@ body {
     50%       { opacity: 0.7; transform: translateY(-14px) scale(1); }
 }
 
-/* Info button on letter */
-.letter-info-btn {
-    position: absolute;
-    top: 12px;
-    right: 14px;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: rgba(160,120,60,0.15);
-    border: 1.5px solid rgba(139,90,43,0.3);
-    color: #8b5a2b;
-    font-family: 'Outfit', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    cursor: pointer;
+/* Info widget - góc trên phải màn hình */
+.info-widget {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 9998;
+}
+.info-widget-dot {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.2s, transform 0.15s;
-    z-index: 10;
-    line-height: 1;
-    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.5);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: default;
+    transition: background 0.2s, color 0.2s;
+    user-select: none;
 }
-.letter-info-btn:hover {
-    background: rgba(160,120,60,0.28);
-    transform: scale(1.1);
+.info-widget:hover .info-widget-dot {
+    background: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.85);
 }
-
-.letter-info-popup {
+.info-widget-tooltip {
     position: absolute;
-    top: 38px;
-    right: 8px;
-    width: 220px;
-    background: #fdf6e3;
-    border: 1px solid rgba(139,90,43,0.2);
+    top: 32px;
+    right: 0;
+    width: 230px;
+    background: rgba(20,14,18,0.92);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(240,144,144,0.15);
     border-radius: 10px;
     padding: 12px 14px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
-    z-index: 20;
-    animation: popupFade 0.2s ease;
-}
-.letter-info-popup p {
     font-family: 'Outfit', sans-serif;
-    font-size: 0.82rem;
-    color: #5a3a1a;
-    line-height: 1.55;
-    margin: 0;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
-.letter-info-popup::before {
+.info-widget:hover .info-widget-tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.info-widget-tooltip::before {
     content: '';
     position: absolute;
-    top: -7px;
+    top: -6px;
     right: 8px;
-    width: 12px;
-    height: 12px;
-    background: #fdf6e3;
-    border-left: 1px solid rgba(139,90,43,0.2);
-    border-top: 1px solid rgba(139,90,43,0.2);
+    width: 10px;
+    height: 10px;
+    background: rgba(20,14,18,0.92);
+    border-left: 1px solid rgba(240,144,144,0.15);
+    border-top: 1px solid rgba(240,144,144,0.15);
     transform: rotate(45deg);
-}
-@keyframes popupFade {
-    from { opacity: 0; transform: translateY(-6px); }
-    to   { opacity: 1; transform: translateY(0); }
 }
 
 /* ===================== MUSIC PLAYER ===================== */

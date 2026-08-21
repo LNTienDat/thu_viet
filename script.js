@@ -112,17 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
         goTo(screen1, screen2, 700);
     });
 
-    // Info button toggle
-    const infoBtn   = document.getElementById('letter-info-btn');
-    const infoPopup = document.getElementById('letter-info-popup');
-    infoBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        infoPopup.classList.toggle('hidden');
-    });
-    document.addEventListener('click', () => {
-        infoPopup.classList.add('hidden');
-    });
-
     // ============================================================
     // MUSIC PLAYER
     // ============================================================
