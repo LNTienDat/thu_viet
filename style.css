@@ -350,6 +350,71 @@ body {
     50%       { opacity: 0.7; transform: translateY(-14px) scale(1); }
 }
 
+/* Info button on letter */
+.letter-info-btn {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(160,120,60,0.15);
+    border: 1.5px solid rgba(139,90,43,0.3);
+    color: #8b5a2b;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.15s;
+    z-index: 10;
+    line-height: 1;
+    padding: 0;
+}
+.letter-info-btn:hover {
+    background: rgba(160,120,60,0.28);
+    transform: scale(1.1);
+}
+
+.letter-info-popup {
+    position: absolute;
+    top: 38px;
+    right: 8px;
+    width: 220px;
+    background: #fdf6e3;
+    border: 1px solid rgba(139,90,43,0.2);
+    border-radius: 10px;
+    padding: 12px 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+    z-index: 20;
+    animation: popupFade 0.2s ease;
+}
+.letter-info-popup p {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.82rem;
+    color: #5a3a1a;
+    line-height: 1.55;
+    margin: 0;
+}
+.letter-info-popup::before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    right: 8px;
+    width: 12px;
+    height: 12px;
+    background: #fdf6e3;
+    border-left: 1px solid rgba(139,90,43,0.2);
+    border-top: 1px solid rgba(139,90,43,0.2);
+    transform: rotate(45deg);
+}
+@keyframes popupFade {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 /* ===================== MUSIC PLAYER ===================== */
 .music-player {
     position: fixed;
